@@ -30,7 +30,7 @@ jobs:
     - name: Run Lucee Test Suite
       uses: lucee/script-runner@main
       with:
-        webroot: ${{ github.workspace }}/src/main/cfml
+        webroot: ${{ github.workspace }}/server/src/main/cfml
         execute: /tests/index.cfm
         compile: true
         luceeVersion: 6.2.0.317-SNAPSHOT
