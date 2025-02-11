@@ -21,5 +21,14 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+
+    - name: Run Lucee Test Suite
+      uses: lucee/script-runner@main
+      with:
+        webroot: ${{ github.workspace }}/src/main/cfml
+        execute: /tests/index.cfm
+        compile: true
+        luceeVersion: 6.2.0.317-SNAPSHOT
+
     - name: Build with Ant
       run: cd server && ant -noinput -buildfile build.xml
