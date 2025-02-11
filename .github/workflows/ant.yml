@@ -22,6 +22,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: dump dir structure
+      run: |
+        ls -lR ${{ github.workspace }}
+        ls -lR
 
     - name: Run Lucee Test Suite
       uses: lucee/script-runner@main
